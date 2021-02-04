@@ -317,7 +317,10 @@
 
 <div class="content" role="main">
 
-  <videojuego></videojuego>
+  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
+  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
+
+  <videojuego *ngIf="mostrar_videojuegos"></videojuego>
   <zapatillas></zapatillas>
   <cursos></cursos>
 

@@ -20,12 +20,19 @@
     <li *ngFor="let tenis of zapatillas">
         
         <span [ngStyle]="{'text-decoration': !tenis.stock ? 'line-through' : 'none'}">
-            {{tenis.nombre}} - <strong>{{tenis.precio}}</strong></span>
+            {{tenis.nombre}} - 
+            <strong 
+                [class.altoPrecio]="tenis.precio >= 80"
+                [ngClass]="{
+                    'fondoRojo': tenis.precio > 100,
+                    'subrayado': tenis.marca == 'Nike'
+                }"
+            >{{tenis.precio}}</strong></span>
 
 
         <span *ngIf="tenis.precio < 80"
             [style.background]="(tenis.precio < 80) ? 'green' : 'transparent'"
-            [style.color]="(tenis.precio < 80) ? 'white' : 'black'"
+            [style.color]="(tenis.precio < 80) ? 'white' : 'black'"            
             > ¡En oferta!</span>
 
     </li>

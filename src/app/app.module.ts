@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
 
 import {CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {CalculadoraPipe } from './pipes/calculadora.pipe';
     CursosComponent,
     HomeComponent,
     ExternoComponent,
-    CalculadoraPipe
+    CalculadoraPipe,
+    ContactoComponent
   ],
   imports: [ /** modulos internos de angulas, externos que hayamos creado y/o cargados */
     BrowserModule,

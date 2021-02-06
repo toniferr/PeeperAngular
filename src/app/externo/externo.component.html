@@ -1,3 +1,10 @@
+<p>
+    {{fecha | date:'dd/MM/yy'}} <br/>
+    {{fecha | date:'fullDate' | uppercase}} <br/>
+    {{'HOLA MUNDO USANDO PIPES' | lowercase}} <br/>
+    {{ 4 | calculadora: 2}}
+</p>
+<hr>
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()" />
 
 <div *ngIf="!user">
